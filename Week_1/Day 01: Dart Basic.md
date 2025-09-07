@@ -34,8 +34,12 @@ String city = "Dhaka";
 bool isActive = true;
 dynamic anything = "Hello"; 
 anything = 123; // ✅ Allowed
+```
 
 ## String Interpolation
+
+String interpolation means inserting variables or expressions directly inside a string using $ or 
+${}. It makes string formatting easier and more readable. 
 
 ```dart
 String name = "Samir";
@@ -44,3 +48,35 @@ int age = 20;
 print("My name is $name and I am $age years old.");
 print("Next year I will be ${age + 1} years old.");
 ```
+
+## Multi-line Strings
+
+''' ... ''' (triple quotes) allow multi-line text without \n.
+
+```dart
+String story = ''' 
+Once upon a time in Dart world, 
+there was a programmer learning variables. 
+He practiced every day! 
+'''; 
+print(story); 
+```
+
+## Null Safety Basics
+
+```dart
+// Nullable string (can hold null)
+String? nickname;
+print(nickname); // Output: null
+
+// Provide default if null (?? operator)
+print(nickname ?? "No nickname"); // Output: No nickname
+
+// Force non-null (!) → risky if value is null
+nickname = "Nafis";
+print(nickname!.toUpperCase()); // Output: NAFIS
+```
+
+👉 ? makes a variable nullable,
+👉 ?? gives default value,
+👉 ! says “I’m sure it’s not null” (but can crash if wrong).
