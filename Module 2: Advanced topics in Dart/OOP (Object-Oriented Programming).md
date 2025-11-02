@@ -1,16 +1,7 @@
 # 🧩 Object-Oriented Programming (OOP) in Dart
 
-Learn the basics of **Object-Oriented Programming (OOP)** in Dart — classes, objects, and constructors.
-
----
-
-## 📑 Table of Contents
-- [What is OOP?](#-what-is-oop)
-- [What is a Class?](#-what-is-a-class)
-- [What is an Object?](#-what-is-an-object)
-- [Class Members](#-class-members)
-- [Constructor (Special Method)](#-constructor-special-method)
-- [Summary](#-summary)
+Learn the fundamentals of **Object-Oriented Programming (OOP)** in Dart — including **classes**, **objects**, **class members**, and **constructors**.  
+In Dart, everything revolves around **objects**.
 
 ---
 
@@ -18,13 +9,14 @@ Learn the basics of **Object-Oriented Programming (OOP)** in Dart — classes, o
 
 **OOP (Object-Oriented Programming)** means structuring your code around **objects** — small units that combine **data (variables)** and **behavior (functions)** together.  
 
-In Dart, everything revolves around **classes** and **objects**.
+In Dart, OOP helps you organize your program into smaller, reusable, and more manageable parts.
 
 ---
 
 ## 🏗️ What is a Class?
 
-A **class** is a **blueprint** or **template** used to create objects.
+A **class** is a **blueprint** or **template** used to create objects.  
+It defines the structure — what properties (data) and methods (functions) an object will have.
 
 ### Example:
 ```dart
@@ -36,3 +28,23 @@ class Car {
     print("Brand: $brand, Year: $year");
   }
 }
+```
+
+---
+
+## 🚗 What is an Object?
+
+An object is an instance of a class — a real example created from the blueprint.
+It allows you to use the data and behavior defined inside the class.
+
+### Example:
+```dart
+void main() {
+  Car myCar = Car(); // Create an object of class Car
+  myCar.showInfo();  // Access the method using the object
+}
+```
+```dart
+Output:
+Brand: Toyota, Year: 2022
+```
