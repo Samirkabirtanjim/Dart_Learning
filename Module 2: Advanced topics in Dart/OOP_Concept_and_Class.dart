@@ -40,3 +40,25 @@ class Car{
         print("Car -> Brand; $brand & Year: $year");
     }
 }
+
+// 👨‍🎓 Question 3:
+// Create a class Student with:
+// variables name and age
+// a constructor that sets both values
+// a method display() that prints the details
+// Then, create a Student object inside main() with your name and age and call display()
+
+void main(){
+    Student student1 = Student("Alekqua", 18);
+    student1.display();
+}
+
+class Student{
+    String name;
+    int age;
+    
+    Student(this.name , this.age);
+    display(){
+        print("Student name: $name and age: $age");
+    }
+}
