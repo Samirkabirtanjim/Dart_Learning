@@ -44,7 +44,74 @@ void main() {
   myCar.showInfo();  // Access the method using the object
 }
 ```
-```dart
+
 Output:
+```dart
 Brand: Toyota, Year: 2022
+```
+
+---
+
+---
+## 📘 Class Members
+
+A class can contain two main types of members:
+
+Fields (variables) — store data
+
+Methods (functions) — define behavior
+
+These members represent the state and behavior of an object.
+
+### Example:
+```dart
+class Student {
+  String name = "Tanjim";
+  int age = 20;
+
+  void display() {
+    print("Name: $name, Age: $age");
+  }
+}
+```
+```dart
+void main() {
+  Student s1 = Student(); // Create an object of class Student
+  s1.display();           // Call the method using the object
+}
+```
+Output:
+```dart
+Name: Tanjim, Age: 20
+```
+
+---
+
+## 🧮 Constructor (Special Method)
+
+A constructor is a special method used to initialize objects automatically when they are created.
+It helps assign values to variables when you create a new object.
+
+### Example:
+```dart
+class Person {
+  String name;
+  int age;
+
+  // Constructor
+  Person(this.name, this.age);
+
+  void showDetails() {
+    print("Name: $name, Age: $age");
+  }
+}
+
+void main() {
+  Person p1 = Person("Samir", 21); // Create object with constructor
+  p1.showDetails();
+}
+```
+Output:
+```dart
+Name: Samir, Age: 21
 ```
