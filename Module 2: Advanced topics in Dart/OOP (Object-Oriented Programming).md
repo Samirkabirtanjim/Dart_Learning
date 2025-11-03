@@ -115,3 +115,37 @@ Output:
 ```dart
 Name: Samir, Age: 21
 ```
+---
+## 📘 Static 
+In Dart, you can access static properties (or variables) directly from the class name, without creating an object (instance) of the class.
+
+### 🧩 Example: Accessing Static Properties
+```dart
+class Student {
+  static String schoolName = "ABC High School";
+  String name;
+
+  Student(this.name);
+
+  void display() {
+    print("Student Name: $name");
+    print("School: $schoolName");
+  }
+}
+
+void main() {
+  // Access static property directly from the class
+  print(Student.schoolName); // ✅ Output: ABC High School
+
+  // Change static property value
+  Student.schoolName = "XYZ International School";
+
+  // Access again to see the change
+  print(Student.schoolName); // ✅ Output: XYZ International School
+
+  // You can still use it in instance methods
+  Student s1 = Student("Tanjim");
+  s1.display();
+}
+```
+----
