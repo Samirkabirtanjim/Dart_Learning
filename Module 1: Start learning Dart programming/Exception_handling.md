@@ -74,8 +74,6 @@ void main() {
 This block always runs.
 ```
 ---
-## 🧩 Summary — Exception Handling
-
 ## 🧩 Exception Handling — Summary
 
 | **Keyword** | **Purpose** |
