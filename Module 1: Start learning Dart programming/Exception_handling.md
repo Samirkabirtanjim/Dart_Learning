@@ -112,3 +112,12 @@ Division attempt finished.
 Cannot divide by zero!
 Division attempt finished.
 ```
+---
+## 🧠 When to Use Each Exception Block
+
+| **Keyword / Combo** | **When to Use It** | **Meaning / Purpose** |
+|----------------------|--------------------|------------------------|
+| `try` | When you want to **check if an error happens** | Just tests code that *might* cause an exception. |
+| `try–catch` | When you **don’t know** what kind of error might occur | Catches **any** exception and lets you handle it safely. |
+| `try–on–catch` | When you **know** what type of error may happen** | Handles **specific exceptions** (like divide by zero, invalid input). |
+| `finally` | When you want to **run some code no matter what** | Runs **always**, whether error happens or not (for cleanup). |
