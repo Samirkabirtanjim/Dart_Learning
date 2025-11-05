@@ -1,3 +1,21 @@
+// Create a class Book with three properties: name, author, and price.
+// Also, create a method called display, which prints out the values of the three properties.
+void main(){
+  Book myBook = Book();
+  myBook.display();
+}
+
+class Book{
+  String name = "Tahmid";
+  String author = "Ahnaf";
+  int price = 190;
+
+  void display(){
+    print("Name $name, Author Name: $author, Price: $price");
+  }
+}
+
+
 // 🧮 Question 1:
 // Create a class named Animal that has:
 // a variable name
