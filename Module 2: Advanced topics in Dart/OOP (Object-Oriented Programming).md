@@ -14,6 +14,13 @@ In **OOP**, an object can be anything, such as a person, a bank account, a car, 
 In Dart, OOP helps you organize your program into smaller, reusable, and more manageable parts.
 
 ---
+### Benefits
+* It is simple to use and comprehend.
+*  It reduces complexity and boosts reusability.
+*  Programmers are becoming more productive.
+*  It facilitates the maintenance, modification, and debugging of the code.
+*  It encourages cooperation and teamwork.
+*  It lessens the amount of code repetition.
 
 ## 🏗️ What is a Class?
 
