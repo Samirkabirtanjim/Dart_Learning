@@ -21,6 +21,16 @@ In Dart, OOP helps you organize your program into smaller, reusable, and more ma
 *  It facilitates the maintenance, modification, and debugging of the code.
 *  It encourages cooperation and teamwork.
 *  It lessens the amount of code repetition.
+---
+### Features Of OOP
+1. Class
+2. Object
+3. Encapsulation
+4. Inheritance
+5. Polymorphism
+6. Abstraction
+
+---
 
 ## 🏗️ What is a Class?
 
