@@ -1,6 +1,29 @@
-## 🧩 1️⃣ What is Asynchronous Programming?
+## 1️⃣ What is Asynchronous Programming?
 
 * *Synchronous:* Tasks run one by one, blocking the next until the current finishes.
 * *Asynchronous:* Tasks can run without waiting, letting the program continue, and handling results later when ready.
 
 Dart uses Future, async, await, and Stream for async programming.
+
+---
+## 2️⃣ Future
+
+A Future represents a value that will be available later, like data from the internet or a file.
+```dart
+Future<String> fetchData() {
+  return Future.delayed(Duration(seconds: 2), () => "Data Loaded");
+}
+
+void main() {
+  print("Start");
+  fetchData().then((data) {
+    print(data);
+  });
+  print("End");
+}
+```
+```sql
+Start
+End
+Data Loaded
+```
