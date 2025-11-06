@@ -168,7 +168,7 @@ void main() {
 }
 ```
 ----
-## 📘 Static 
+## 📘 Method 
 A method is just a function inside a class that does some action.
 
 ```dart
@@ -213,3 +213,72 @@ Then you call the methods:
 calc.add();
 calc.multiply();
 ---
+## 📘 What is a Constructor?
+
+A constructor is a special method inside a class that runs automatically when you create an object.
+It’s used to initialize (give starting values) to the object’s variables.
+
+### 🧱 Types of Constructors
+
+* Default constructor – automatically created if you don’t write one.
+* Parameterized constructor – takes parameters.
+* Named constructor – special name for different ways of creating objects.
+
+---
+### 1. Default Constructor
+
+```dart
+class Student {
+  String? name;
+  int? age;
+}
+
+void main() {
+  Student s1 = Student(); // Default constructor
+  s1.name = "Tanjim";
+  s1.age = 20;
+  print("${s1.name}, ${s1.age}");
+}
+```
+---
+### Parameterized constructor
+```dart
+class Student {
+  String name;
+  int age;
+
+  // Constructor
+  Student(this.name, this.age);
+
+  void display() {
+    print("Name: $name, Age: $age");
+  }
+}
+
+void main() {
+  Student s1 = Student("Tanjim", 20); // constructor runs automatically
+  s1.display();
+}
+```
+### Named Constructor
+```dart
+class Student {
+  String name = "";
+  int age = 0;
+
+  // Named constructor
+  Student.guest() {
+    name = "Guest";
+    age = 0;
+  }
+
+  void display() {
+    print("Name: $name, Age: $age");
+  }
+}
+
+void main() {
+  Student s1 = Student.guest();
+  s1.display();
+}
+```
