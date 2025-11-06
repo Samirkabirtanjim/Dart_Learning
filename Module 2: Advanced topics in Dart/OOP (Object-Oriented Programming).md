@@ -168,3 +168,48 @@ void main() {
 }
 ```
 ----
+## 📘 Static 
+A method is just a function inside a class that does some action.
+
+```dart
+class Calculator {
+  int num1 = 0;
+  int num2 = 0;
+
+  void add() {
+    int sum = num1 + num2;
+    print("Sum of the numbers: $sum");
+  }
+
+  void multiply() {
+    int mul = num1 * num2;
+    print("Multiplication of the numbers: $mul");
+  }
+}
+
+void main() {
+  Calculator calc = Calculator(); // create object
+  calc.num1 = 5;
+  calc.num2 = 10;
+
+  calc.add();
+  calc.multiply();
+}
+```
+```sql
+Sum of the numbers: 15
+Multiplication of the numbers: 50
+```
+### 🧠 Explanation:
+
+add() and multiply() are methods inside the class.
+You create one object: Calculator calc = Calculator();
+
+You set values for the object’s variables:
+calc.num1 = 5;
+calc.num2 = 10;
+
+Then you call the methods:
+calc.add();
+calc.multiply();
+---
