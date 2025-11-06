@@ -280,3 +280,32 @@ void main() {
   s1.display();
 }
 ```
+---
+## ⚙️ Function & Constructor Overloading in Dart
+
+❌ Dart does not support traditional method or constructor overloading
+(as in languages like Java or C++).
+
+That means —
+you cannot define multiple methods or constructors with the same name but different parameters.
+
+For example 👇
+This will cause an error in Dart:
+```dart
+class Student {
+  Student(String name) {
+    print("Name: $name");
+  }
+
+  // ❌ ERROR: Dart does not allow another constructor with same name
+  Student(String name, int age) {
+    print("Name: $name, Age: $age");
+  }
+}
+```
+### 🧠 Why?
+
+Because Dart identifies functions by name only, not by parameter list.
+So, having two constructors or methods with the same name creates a conflict.
+
+---
