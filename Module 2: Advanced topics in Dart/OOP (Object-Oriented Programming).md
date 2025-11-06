@@ -68,17 +68,14 @@ Output:
 ```dart
 Brand: Toyota, Year: 2022
 ```
-
 ---
 
----
 ## 📘 Class Members
 
 A class can contain two main types of members:
 
-Fields (variables) — store data
-
-Methods (functions) — define behavior
+* Fields (variables) — store data
+* Methods (functions) — define behavior
 
 These members represent the state and behavior of an object.
 
@@ -212,6 +209,7 @@ calc.num2 = 10;
 Then you call the methods:
 calc.add();
 calc.multiply();
+
 ---
 ## 📘 What is a Constructor?
 
