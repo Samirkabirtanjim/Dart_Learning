@@ -31,7 +31,7 @@ Dog barks
 ```
 ---
 
-###2️⃣ Encapsulation — "Hiding data, protecting it"
+## 2️⃣ Encapsulation — "Hiding data, protecting it"
 It means keeping class details private and controlling access using getters and setters. This keeps data safe and prevents misuse.
 
 ### Example:
