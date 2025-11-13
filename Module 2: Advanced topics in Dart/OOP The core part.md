@@ -31,7 +31,7 @@ Dog barks
 ```
 ---
 
-## 2️⃣ Encapsulation — "Hiding data, protecting it"
+###2️⃣ Encapsulation — "Hiding data, protecting it"
 It means keeping class details private and controlling access using getters and setters. This keeps data safe and prevents misuse.
 
 ### Example:
@@ -127,3 +127,110 @@ void main() {
 ou can’t create Animal() object because it’s abstract.
 It just defines what should happen — the subclasses define how.
 ```
+
+---
+
+## Override and super
+
+### What is override?
+
+👉 The @override keyword is used when a child class changes (modifies) a method that already exists in its parent class. It’s part of Polymorphism — same method name, different behavior.
+
+## Example:
+
+```dart
+class Animal {
+  void sound() {
+    print("Animal makes a sound");
+  }
+}
+
+class Dog extends Animal {
+  @override
+  void sound() {
+    print("Dog barks");
+  }
+}
+
+void main() {
+  Dog dog = Dog();
+  dog.sound();
+}
+```
+
+### Output:
+
+```sql
+Dog barks
+```
+🟢 Here, Dog overrides the sound() method of Animal.
+Even though Dog is a subclass, it replaces the parent’s version with its own.
+
+---
+
+## What is super?
+super means *“access parent class”*.
+
+You can use super to:
+* Call parent methods inside the child class
+* Access parent class variables or constructors
+
+### Example 1: Using super to call parent method
+
+```dart
+class Animal {
+  void sound() {
+    print("Animal sound");
+  }
+}
+
+class Dog extends Animal {
+  @override
+  void sound() {
+    super.sound(); // calls parent version first
+    print("Dog barks");
+  }
+}
+
+void main() {
+  Dog dog = Dog();
+  dog.sound();
+}
+```
+### Output:
+```sql
+Animal sound
+Dog barks
+```
+🟢 First, it runs the parent’s sound() (because of super.sound()), then the child’s version.
+
+### Example 2: Using super with constructor
+
+```dart
+class Person {
+  String name;
+  Person(this.name);
+}
+
+class Student extends Person {
+  int roll;
+
+  // use super to call parent constructor
+  Student(String name, this.roll) : super(name);
+
+  void showInfo() {
+    print("Name: $name, Roll: $roll");
+  }
+}
+
+void main() {
+  Student s = Student("Tanjim", 7);
+  s.showInfo();
+}
+```
+
+### Output:
+```sql
+Name: Tanjim, Roll: 7
+```
+🟢 The super(name) calls the parent constructor to set the name variable.
