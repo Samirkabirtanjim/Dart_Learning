@@ -1,4 +1,4 @@
-The 4 main pillars that make Object-Oriented Programming powerful and reusable.
+## The 4 main pillars that make Object-Oriented Programming powerful and reusable.
 
 ## 1️⃣ Inheritance — "Getting properties from parents"
 
