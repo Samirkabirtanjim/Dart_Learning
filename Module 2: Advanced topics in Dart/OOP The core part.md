@@ -62,6 +62,16 @@ That’s encapsulation.
 ## 3️⃣ Polymorphism — "One name, many forms"
 
 Means same method name works differently for different classes. Usually done using method overriding.
+
+## 🧠 Types of Polymorphism in Dart
+* ✔️ 1. Method Overriding (Supported)
+
+Child class changes the parent method.
+
+* ❌ Method Overloading (Dart does not support this)
+
+So in Dart, polymorphism = overriding.
+
 ### Example:
 ```dart
 class Animal {
