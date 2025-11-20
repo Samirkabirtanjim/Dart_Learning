@@ -124,7 +124,21 @@ That’s polymorphism — same method sound() acts differently depending on the 
 
 ## 4️⃣ Abstraction — "Showing only the necessary"
 
-Hiding complex details and showing only important parts to the user. In Dart, we use abstract classes for this.
+Abstraction means hiding unnecessary details and showing only the important things.
+
+In Dart, we do abstraction using:
+
+✅ 1. abstract class
+❌ Dart has NO interface keyword — but abstract class works like interface.
+🟦 Why use Abstraction?
+
+To avoid showing internal logic
+To force child classes to implement methods
+To organize large systems
+
+Example:
+You use the phone — but you don’t know how the internal processor works.
+That is abstraction.
 
 ### Example:
 ```dart
