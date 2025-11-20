@@ -140,27 +140,108 @@ Example:
 You use the phone — but you don’t know how the internal processor works.
 That is abstraction.
 
-### Example:
+### 🟦 How to create abstraction in Dart?
+
+```dart
+abstract class ClassName {
+  // abstract method
+  void methodName();
+
+  // normal method allowed
+  void normalMethod() {
+    print("This is normal");
+  }
+}
+```
+
+### 🟦 1. Abstract Class Example
+
 ```dart
 abstract class Animal {
   void sound(); // abstract method (no body)
-}
 
+  void sleep() {
+    print("Animal is sleeping");
+  }
+}
+```
+
+Child MUST override sound():
+
+```dart
 class Dog extends Animal {
   @override
   void sound() {
     print("Dog barks");
   }
 }
-
+```
+Testing:
+```dart
 void main() {
-  Dog d = Dog();
-  d.sound();
+  Animal myDog = Dog();
+  myDog.sound();
+  myDog.sleep();
+}
+
+```
+### 🟦 2. Abstract Methods = No body
+
+This is NOT allowed:
+```dart
+void run() {
+  print("Running");  // ❌ cannot have body in abstract method
 }
 ```
-```sql
-ou can’t create Animal() object because it’s abstract.
-It just defines what should happen — the subclasses define how.
+Correct:
+void run();  // ✔ no body
+
+### 🟦 3. You cannot create an object of an abstract class
+
+❌ This will throw error:
+```dart
+Animal a = Animal();   // ERROR
+```
+✔ You must create object of child:
+
+```dart
+Animal a = Dog();
+```
+
+🟦 4. Real-Life Example
+
+```dart
+abstract class Shape {
+  void area(); // abstract method
+}
+
+class Circle extends Shape {
+  @override
+  void area() {
+    double r = 10;
+    double pi = 3.1416;
+    print("Circle area = ${pi * r * r}");
+  }
+}
+
+class Rectangle extends Shape {
+  @override
+  void area() {
+    double w = 5;
+    double h = 10;
+    print("Rectangle area = ${w * h}");
+  }
+}
+
+void main() {
+  Shape s;
+
+  s = Circle();
+  s.area();
+
+  s = Rectangle();
+  s.area();
+}
 ```
 
 ---
