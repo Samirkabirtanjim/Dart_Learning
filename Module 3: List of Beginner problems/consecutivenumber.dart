@@ -30,38 +30,38 @@ Output: false
 
 import 'dart:io';
 
-bool isConsecutive(List<int> arr){
+bool isConsecutiveNumbers(List<int> arr){
   if(arr.length != arr.toSet().length){
     return false;
   }
 
-  int mn = arr[0];
+  int minimum = arr[0];
   for(int number in arr){
-    if(number < mn){
-      mn = number;
+    if(number < minimum){
+      minimum = number;
     }
   }
 
-  int mx = arr[0];
+  int maximum = arr[0];
   for(int number in arr){
-    if(number > mx){
-      mx = number;
+    if(number > maximum){
+      maximum = number;
     }
   }
-
-  return (mx - mn + 1 == arr.length);
+  return (maximum - minimum + 1 == arr.length);
 }
 
 void main(){
-
   stdout.write("Enter Index Number: ");
   int n = int.parse(stdin.readLineSync()!);
 
   stdout.write("Enter $n numbers: ");
   List<int> arr = stdin.readLineSync()!
-  .split('')
+  .split(' ')
   .map(int.parse)
   .toList();
 
-  print(isConsecutive(arr));
+  print(isConsecutiveNumbers(arr));
 }
+
+
