@@ -30,21 +30,38 @@ Output: false
 
 import 'dart:io';
 
-void main(){
-  String? input = stdin.readLineSync();
+bool isConsecutive(List<int> arr){
+  if(arr.length != arr.toSet().length){
+    return false;
+  }
 
-  if(input != null){
-    int sum = 0;
-
-    for(int i = 0; i < input.length; i++){
-      int digit = int.parse(input[i]);
-      sum += digit;
-    }
-
-    if(sum % 2 == 0){
-      print("Even");
-    } else{
-      print("Odd");
+  int mn = arr[0];
+  for(int number in arr){
+    if(number < mn){
+      mn = number;
     }
   }
+
+  int mx = arr[0];
+  for(int number in arr){
+    if(number > mx){
+      mx = number;
+    }
+  }
+
+  return (mx - mn + 1 == arr.length);
+}
+
+void main(){
+
+  stdout.write("Enter Index Number: ");
+  int n = int.parse(stdin.readLineSync()!);
+
+  stdout.write("Enter $n numbers: ");
+  List<int> arr = stdin.readLineSync()!
+  .split('')
+  .map(int.parse)
+  .toList();
+
+  print(isConsecutive(arr));
 }
